@@ -1,0 +1,31 @@
+.reviewdata-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #808084;
+}
+.reviewdata-value {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #323234;
+}
+.reviewdata-pack {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.hasPlan {
+  margin-left: 12%;
+}
+.planLast {
+  margin-left: 8.6%;
+}
+.planType {
+  margin-left: 13%;
+}
+.spouse {
+  margin-left: 14%;
+}

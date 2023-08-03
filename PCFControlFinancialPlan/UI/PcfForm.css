@@ -1,0 +1,38 @@
+.planTitle {
+  font-size: 12px;
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid darkgrey;
+}
+
+.planContainer {
+  margin: 30px;
+  background-color: #ffff;
+}
+.actionContainer {
+  margin: 30px;
+  background-color: #ffff;
+  height: 150px;
+}
+.actionMain {
+  margin: 16px;
+}
+.planMain {
+  margin: 16px;
+}
+.menuContainer {
+  width: 50% !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.menuClass {
+  display: flex;
+}
+.dropArrow {
+  margin-top: 6px !important;
+}
+
+.mainGridContainer {
+  width: 60% !important;
+  margin-top: 20px;
+}
