@@ -48,37 +48,38 @@ export class PCFControlFinancialPlan
    */
   public updateView(context: ComponentFramework.Context<IInputs>): void {
     // Add code to update control view
-    this._lock
-      .acquire("init", async () => {
-        if (
-          this._msalInstance == null ||
-          context.updatedProperties.includes("env_msalConfig")
-        ) {
-          this._msalInstance = await this.getMsalConfig("");
-        }
+    this._lock.acquire("init", async () => {
+      ReactDOM.render(React.createElement(App, this._props), this._container);
+      //   if (
+      //     this._msalInstance == null ||
+      //     context.updatedProperties.includes("env_msalConfig")
+      //   ) {
+      //     this._msalInstance = await this.getMsalConfig("");
+      //   }
 
-        if (
-          this._tokenRequest == null ||
-          context.updatedProperties.includes("env_scopes")
-        ) {
-          this._tokenRequest = {
-            scopes: await this.getScopes(""),
-          };
-        }
-      })
-      .then(() => {
-        if (this._msalInstance) {
-          this._props = {
-            componentContext: context,
-            msalInstance: this._msalInstance,
-            tokenRequest: this._tokenRequest,
-          };
-          ReactDOM.render(
-            React.createElement(App, this._props),
-            this._container
-          );
-        }
-      });
+      //   if (
+      //     this._tokenRequest == null ||
+      //     context.updatedProperties.includes("env_scopes")
+      //   ) {
+      //     this._tokenRequest = {
+      //       scopes: await this.getScopes(""),
+      //     };
+      //   }
+      // })
+      // .then(() => {
+      //   if (this._msalInstance) {
+      //     this._props = {
+      //       componentContext: context,
+      //       msalInstance: this._msalInstance,
+      //       tokenRequest: this._tokenRequest,
+      //     };
+
+      //     ReactDOM.render(
+      //       React.createElement(App, this._props),
+      //       this._container
+      //     );
+      //   }
+    });
   }
 
   /**

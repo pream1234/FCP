@@ -1,5 +1,6 @@
 import React = require("react");
 import "./TitleValue.css";
+import { Grid } from "@mui/material";
 
 type Props = {
   title: string;
@@ -22,15 +23,20 @@ const TitleValue = ({
   valueClassNameSecondary,
 }: Props) => {
   return (
-    <div className={woundTitleClassName}>
-      <div className={titleClassName}>{title}</div>
-      <div
-        className={`${valueClassName} ${valueClassNameSecondary}`}
-        onClick={onValueClick}
-      >
-        {value}{" "}
-      </div>
-    </div>
+    <Grid className={woundTitleClassName} container>
+      <Grid item xs={3}>
+        <p className={titleClassName}>{title}</p>
+      </Grid>
+      <Grid item xs={6}>
+        <p
+          className={`${valueClassName} ${valueClassNameSecondary}`}
+          onClick={onValueClick}
+        >
+          {" "}
+          {value}{" "}
+        </p>
+      </Grid>
+    </Grid>
   );
 };
 

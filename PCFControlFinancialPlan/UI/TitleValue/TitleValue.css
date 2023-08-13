@@ -3,21 +3,22 @@
   font-size: 12px;
   line-height: 16px;
   color: #808084;
+  float: left;
 }
 .reviewdata-value {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #323234;
+  float: left;
 }
 .reviewdata-pack {
   display: flex;
   width: 100%;
   flex-direction: row;
-  margin-bottom: 30px;
 }
 
-.hasPlan {
+/* .hasPlan {
   margin-left: 12%;
 }
 .planLast {
@@ -28,4 +29,4 @@
 }
 .spouse {
   margin-left: 14%;
-}
+} */

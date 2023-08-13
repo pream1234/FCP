@@ -4,22 +4,25 @@ import { IInputs } from "./generated/ManifestTypes";
 import { PopupRequest } from "@azure/msal-browser";
 
 export interface IAppContext {
-  componentContext: ComponentFramework.Context<IInputs>;
-  tokenRequest: PopupRequest;
+  componentContext?: ComponentFramework.Context<IInputs>;
+  tokenRequest?: PopupRequest;
+  accessToken?: any;
+  setAccessToken?: any;
 }
 
-export const AppContext = createContext<IAppContext>({} as IAppContext);
+export const AppContext = createContext<IAppContext | null>(null);
 
-export const AppProvider: React.FC<IAppContext> = (props) => {
-  const { componentContext, tokenRequest } = props;
+export const AppProvider: React.FC<IAppContext> = ({ children }) => {
+  const [accessToken, setAccessToken] = React.useState();
 
   return (
     <AppContext.Provider
-      value={{ componentContext, tokenRequest: tokenRequest }}
+      value={{
+        accessToken,
+        setAccessToken,
+      }}
     >
-      {props.children}
+      {children}
     </AppContext.Provider>
   );
 };
-
-export const useAppContext = () => useContext(AppContext);

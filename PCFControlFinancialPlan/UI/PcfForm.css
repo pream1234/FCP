@@ -6,22 +6,21 @@
 }
 
 .planContainer {
-  margin: 30px;
   background-color: #ffff;
 }
 .actionContainer {
-  margin: 30px;
   background-color: #ffff;
   height: 150px;
+  width: 100%;
 }
 .actionMain {
-  margin: 16px;
+  padding: 16px;
 }
 .planMain {
   margin: 16px;
 }
 .menuContainer {
-  width: 50% !important;
+  width: 70% !important;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -33,6 +32,15 @@
 }
 
 .mainGridContainer {
-  width: 60% !important;
   margin-top: 20px;
+}
+
+.buttonOpen {
+  float: left;
+}
+
+.convertDropdwonText {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
 }
